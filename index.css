@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* PRIMARY COLORS */
+
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* NEUTRAL COLORS */
+
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-bg);
+    color: var(--white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .card{
+    width: 342px;
+    height: 580px;
+    background-color: var(--card-bg);
+
+    border: 0;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+body .card .product-image{
+    width: 302px;
+    height: 302px;
+    background: url(./image-equilibrium.jpg) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    border: 0;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+body .card .product-image .active-view{
+    display: none;
+}
+
+
+
+
+body .card .product-image:active .active-view{
+    display: block;
+}
+
+
+body .card .card-content{
+    width: 100%;
+    height: 130px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body .card .card-content .NFT-title{
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+body .card .card-content .NFT-description{
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+
+body .card .card-content .price-time{
+    width: 100%;
+    height: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body .card .card-content .price-time .price-box{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+body .card .card-content .price-time .price-box .price{
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--cyan);
+
+    margin-left: 10px;
+
+    cursor: pointer;
+}
+
+body .card .card-content .price-time .publish-time{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+
+    font-family: "Outfit", sans-serif;
+    color: var(--soft-blue);
+    font-size: 15px;
+}
+
+body .card .card-content .price-time .publish-time span{
+    margin-left: 5px;
+}
+
+body .card hr{
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: var(--line-color);
+}
+
+body .card .profil-box{
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+body .card .profil-box img{
+    width: 40px;
+    border: 1px solid white;
+    border-radius: 50px;
+
+    margin-right: 20px;
+}
+
+body .card .profil-box{
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+
+body .card .profil-box .profil-link{
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* ACTIVE ELEMENTS */
+
+/* Product-image */
+body .card .product-image:active{
+    background-image: linear-gradient(hsl(189, 100%, 37%, 70%), hsl(189, 100%, 37%, 70%)), url(./image-equilibrium.jpg);
+}
+/* NFT Title */
+body .card .card-content .NFT-title:active{
+    color: var(--cyan);
+}
+/* profil link */
+body .card .profil-link:active{
+    color: var(--cyan);
+}
+
+@media screen and (max-width: 375px){
+    body .card{
+        width: 245px;
+        height: 406px;
+        background-color: var(--card-bg);
+    
+        border: 0;
+        border-radius: 10px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        padding: 18px;
+    }
+    body .card .product-image{
+        width: 209px;
+        height: 209px;
+        background: url(./image-equilibrium.jpg) ;
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+        border: 0;
+        border-radius: 10px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    body .card .card-content{
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        margin-top: 15px;
+    }
+    body .card .card-content .NFT-title{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    body .card .card-content .NFT-description{
+        font-size: 12px;
+        font-weight: medium;
+    }
+    body .card .price-time .price-box h3{
+        font-size: 12px;
+        font-weight: medium;
+    }
+    body .card .price-time .price-box img{
+        width: 8px;
+        height: auto;
+    }
+    body .card .price-time .publish-time span{
+        font-size: 12px;
+        font-weight: medium;
+    }
+    body .card .price-time .publish-time img{
+        width: 12px;
+        height: auto;
+    }
+
+    body .card hr{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    body .card .profil-box img{
+        width: 25px;
+    }
+    body .card .profil-box p{
+        font-size: 12px;
+    }
+
+    /* ACTIVE ELEMENTS */
+
+        /* Product-image */
+        body .card .product-image:active{
+            background-image: linear-gradient(hsl(189, 100%, 37%, 70%), hsl(189, 100%, 37%, 70%)), url(./image-equilibrium.jpg);
+        }
+        /* NFT Title */
+        body .card .card-content .NFT-title:active{
+            color: var(--cyan);
+        }
+        /* profil link */
+        body .card .profil-link:active{
+            color: var(--cyan);
+        }
+}
+
+@media screen and (min-width: 376px){
+    body .card{
+        scale: 0.9;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    body .card{
+        scale: 1;
+    }
+}
